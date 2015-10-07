@@ -1,0 +1,3 @@
+# diplomovaprace
+Diplomová práce
+zkouška
