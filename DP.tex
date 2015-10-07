@@ -1,0 +1,311 @@
+\documentclass[12pt]{article}
+\usepackage[figures]{updiplom}
+\usepackage{czech}
+\usepackage[cp1250]{inputenc}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{dirtree}
+\begin{document}
+\section{Úvod} Slova mobilní platforma mohou pøedstavovat mnoho vìcí. Já se však ve své diplomové prací budu zabıvat vıznamem zøejmì nejaktuálnìjším a to mobilními telefony a tablety, které si lidé s tìmito slovy dnes nejèastìji spojují. V dnešní dobì se ji do popøedí dostalo nìkolik operaèních systémù na tyto zaøízení, proto se zamìøím pøedevším na tvorbu softwaru, jen je pro nì urèenı. \\
+\indent Svojí práci rozdìlím do nìkolika èástí. První z nich se bude tıkat nejprve obecného pøehledu monıch øešení pro tvorbu mobilních aplikací. Konkrétnì tedy jak programování pro jednotlivé operaèní systémy zvláš, tak multiplatformní vıvoj. Poté v této èásti rozeberu první vıše zmínìné øešení a následnì vyzdvihnu jeho klady a zápory. Popíši také konkrétní nástroje pro vytváøení aplikací u tohoto øešení. \\
+\indent V další èásti se zamìøím trochu podrobnìji na øešení multiplatformního vıvoje. Nejprve popíši klady tohoto øešení, pote zmíním i nìjaké zápory. Rozeberu konkrétní existující nástroje a spoleènosti, které za nimi stojí. Má analıza se bude zabıvat srovnáním nezávislıch hodnocení tìchto spoleèností, jakı vyuívaly a vyuívají marketing, jak velká základna uivatelù za nimi stojí, jaké monosti mají nástroje tìmito spoleènostmi vytvoøené a pøedevším také, jakı je jejich potenciál pro budoucí rozvoj. Poslednímu bodu budu vìnovat zvıšenou pozornost, nebo má práce bude slouit pøedevším jako doporuèení pro vybrání konkrétního nástroje pro budoucí tvorbu multiplatformních aplikací. \\
+\indent Následující èást se podrobnìji zamìøí na dvì vybrané spoleènosti a na nástroje které reprezentují. Popíši pøedevším, proè jsem si vybral zrovna tyto dvì spoleènosti, èím se prezentují a proè bych právì je doporuèil, èi nedoporuèil. Poté se zamìøím na marketingové analızy spoleèností a stanovım prognózy jejich moného budoucího vıvoje vzhledem k jejich aktuálním stavùm a jejich minulosti. \\
+\indent Poslední èást se bude tıkat praktického vıvoje v nástrojích, které prezentují dvì vıše zmínìné spoleènosti. Bude se jednat o konkrétní tvorbu aplikace, pro neziskovou organizaci, zabıvající se tématikou útulkù pro psy a ochranou psù samotnıch. Konkrétní funkce aplikace bude pøedevším v zjednodušení nalezení ztracenıch psù. Èlovìk, kterı tuto aplikaci pouije, bude mít monost zadat do databáze svého ztraceného psa s informacemi o nìm a také s polohou, kde byl tento pes ztracen. Ostatním uivatelùm této aplikace budou tyto zadané informace zobrazeny, s moností informovat majitele psa o jeho spatøení èi nalezení. Závìr této èásti mé diplomové práce bude zamìøen na porovnání probìhlıch øešení a pøípadnì konkrétní doporuèení na lepší z nich. \\
+\indent Bìhem tvorby vzorové aplikace a obsahu diplomové práce budu spolupracovat s firmou GMC Software Technology. Konzultace budou probíhat pøedevším k upøesnìní poadavkù na analızu multiplatformních nástrojù. Pøi vıvoji aplikace bude také dozajista zapotøebí komunikovat s budoucími uivateli aplikace a upøesnit tak jejich poadavky a pøání.
+
+\section{Singleplatform  (jen prozatimní název)}
+\subsection{Souèasné monosti}
+Pokud má vıvojáø v plánu vytvoøit aplikaci pro mobilní platformu, mùe se v zásadì vybrat dvìma smìry. Bohuel, èí moná z pohledu konkurence bohudík, momentálnì je trh jak s telefony, tak s tablety (dále jako mobilní zaøízení) rozdroben do více spoleèností. Èlovìk si tak mùe obstarat zaøízení s rùznımi operaèními systémy. Z dùvodu konkurenèních bojù však nejsou tyto systémy nijak standardizovány. Vıvojáøova tvorba tak mùe smìøovat buï na vyuití nástrojù a programovacích jazykù podporovanıch pøímo vırobcem, nebo mùe sáhnout po druhém smìru a pouitím nìkterého multiplatformního nástroje. Ten mu umoní tvorbu na více operaèních systémù souèasnì. Nelze jednoznaènì øíci, kterı z tìchto smìrù je lepší, nebo záleí pøedevším na konkrétních poadavcích a specializaci konkrétní vytváøené aplikace. Dalo by se však øíci, vzhledem k aktuálnímu rozloení trhu, e multiplatformní vıvoj je správnım krokem a budoucí vıvoj bude zøejmì smìøovat právì tímto smìrem.
+
+\subsection{Vıbìr platformy}
+Pøed samotnım vıvojem je tedy zapotøebí si nejprve stanovit, pod jakou platformou se bude aplikace vyvíjet. K tomuto úkonu je dobré provést prùzkum mezi monımi budoucími uivateli aplikace a následnì stanovit nejvìtší procentuální zastoupení jednotlivıch platforem. Tento krok je velmi dùleitı, nebo, jak ji bylo vıše zmínìno, jednotlivé platformy nejsou navzájem kompatibilní. 
+
+\subsubsection{Zastoupení platforem}
+Aktuální stav trhu nám mùe dosti napovìdìt o tom, jakou cílovou platformu zvolit. Jednou z monıch analız, je analıza americké firmy Net Applications. Ta vychází èistì z podílu jednotlivıch operaèních systému na prohlíení vybranıch internetovıch stránek. Ukazuje nám, e témìø devadesáti procentní podíl na trhu platforem, respektive mobilních operaèních systémù na nich postavenıch, zabírají pouze dva z pìti prùzkumem rozlišenıch. Tìmito systémy jsou Android a iOS. 
+
+\subsubsection{Android}
+Spoleènost Google je autorem bezplatného balíku nástrojù Android Developer Tools. Ten obsahuje SDK pro kadou verzi OS Android, nástroje pro vıvoj Android aplikací v jazyce Java a také plug-in pro vıvojové prostøedí Eclipse, umoòující zjednodušení kódování, kompilaci a testování. Google takté podporuje nativní psaní aplikací v jazycích C a C++ pomocí vıvojového kitu Android Native Development Kit. Jako alternativu k pluginu pro Eclipse je moné vyuít software Android Studio, kterı je však pouze v beta stádiu. Android Studio je také uzpùsobeno k vıvoji aplikací pro platformy Android Wear a Android TV. Tuto platformu je vhodné zvolit, pokud chce uivatel vydávat vıhradnì aplikace pro operaèní systém Android.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Nejlepší volba pro programování v jazyce Java na OS Android
+\item	Okamitı pøístup k nejnovìjším funkcím z vıvojovıch nástrojù
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item Není multiplatformní
+\end{itemize}
+\subsubsection{iOS}
+Apple je firma, která chce distribuovat nativní aplikace iOS aplikace, musí mít dohodu s firmou Apple, nebo všechny aplikace musejí bıt distribuovány pøes Apple App Store. Je monost vyvíjet také HTML5 aplikace, které pobìí na iOS zaøízenıch, avšak Apple neposkytuje ádné nástroje urèené pro tento druh vıvoje. Apple je vhodnı pro spoleènosti, jen jsou zamìøení na vıvoj iOS aplikací.\\
+
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Nástroje Applu nabízejí nejlepší monou podporu pro iOS zaøízení
+\item	iOS SDK je jedno z nejpopulárnìjších pro mobilní vıvoj
+
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Apple zamìøuje svùj vıvoj mobilních aplikací pouze na operaèní systém iOS
+\item	Potøeba dovednosti v Objective-C, Xcode IDE a iOS SDK
+\item	Apple MADP nástroje potøebují ke svému spuštìní MAC PC
+\item	Nástroje se zamìøují na front-end èást a neobsahují serverovou èást nebo back-end sluby
+
+\end{itemize}
+\subsection{Klady a zápory}
+
+\section{Multiplatform}
+
+\subsection{Klady a zápory}
+
+\subsection{Dostupné nástroje}
+
+\subsubsection{Adobe}
+Adobe je známı velkım mnostvím nástrojù jak pro mobilní, tak i webovı vıvoj. Unikátní je pøedevším v tom, e vlastní framework PhoneGap, kterı pouívá pøehršel níe uvedenıch konkurentù. Nad opensource frameworkem PhoneGap ale sám Adobe nabízí platformu PhoneGap Enterprise. Ta obsahuje velké mnoství nástrojù, tıkajících se celého ivotního cyklu aplikace a také integraci s jinımi nástroji firmy Adobe, jako je napøíklad Adobe Analytics, umoòující marketingové analızy v reálném èase.\\
+
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Jak multiplatformní, tak centrickı vıvoj v oddìlenıch nástrojích
+\item	PhoneGap udává standard MADP vıvoje
+\item	PhoneGap má širokou škálu pluginù a velkou podporu
+\item	Zjednodušuje vıvoj pomocí známıch technologií HTML/CSS/JS s moností vıbìru frameworku
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Technologie „hybrid wrapper“ skıtá jistá omezení – monost odstranìní pomocí pluginù
+\end{itemize}
+
+\subsubsection{Appcelerator}
+Spoleènost Appcelerator je prùkopníkem na poli moderního multiplatformního vıvoje. V roce 2015 ji zastøešuje pøes 600 000 vıvojáøù. Nástroj Appcelerator Studio je postaven na JavaScript frameworku. Ten je pak cílenì kompilován do nativních Android a iOS aplikací, co zahrnuje pøeklad do jazyk Objective-C èi Java.\\
+\indent Spoleènost také nabízí rùzné front-end a back-end sluby tıkající se vıvoje, jako jsou nástroje pro marketingové analızy, èi monosti testování vytvoøenıch aplikací na vícero zaøízení napøíè spektrem.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Dobrá pozice na dynamickém a rychle se vyvíjejícím MADP (Mobile application development platform) trhu
+\item 	Monost tvorby jak hybridních, tak nativních èi webovıch aplikací
+\item	Nabízí plné portfolio back-end slueb a front-end nástroje a frameworky, díky nim lze dosáhnout mnoha poadovanıch scénáøù
+\item	Spoleènost demonstrovala schopnost rychle se pøizpùsobit mìnícímu se trhu
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Nutnost programovat pomocí JavaScript jak na stranì klienta, tak na stranì serveru
+\item	Vysoká cena
+\end{itemize}
+
+\subsubsection{Backbase}
+Spoleènost Backbase, známá pøedevším z vıvoje softwaru pro marketingové spoleènosti, v nedávné dobì pøidala do svého portfolia také monost multiplatformního vıvoje. Ten je nabízen zároveò s dalšími nástroji a slubami pod názvem Backbase Customer Experience Platform (CXP). Mimo jiné také umoòují nejrùznìjším firemním uivatelùm úpravu svıch aplikací pomocí GUI, bez nutné znalosti programování. Klientské aplikace jsou pak skládány z, ji spoleènosti vytvoøenıch, widgetù. Ta pak komunikuje s nakonfigurovanım webovım serverem.\\
+\indent Nástroje a tvorba aplikací nijak nevyboèuje z nabízenıch slueb spoleènosti Backbase, nebo je na trhu úzce specializována. Díky tomu si zajistí jak stálé uivatele, tak pøísun novıch.
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Díky specifikaci silnı nástroj pro finanèní klientelu
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Specifickı nástroj není vhodnı pro tvorbu bìnıch mobilních aplikací
+\end{itemize}
+
+
+\subsubsection{ClickSoftware}
+Spoleènost ClickSoftware je lídrem v oblasti øešení pro øízení pracovní síly v technickém prùmyslu. Díky tomu je schopna nabídnout ji hotová funkèní øešení aplikací pro komunikaci èi financování. Kromì balíku existujících øešení umoòuje také tvorbu kompletnì novıch aplikací. Klientské aplikace jsou zaloeny na HTML5 hybridní architektuøe.  ClickSoftware byla jedna z prvních spoleèností, jen zaèala nabízet hostingové sluby zaloené na cloud technologiích.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Spoleènost nabízí platformu zahrnující nástroje, frameworky, obchod aplikací a rozsáhlé knihovny, co umoòuje rychlı vıvoj v oblasti mobilních aplikací
+\item	Spoleènost pokraèuje v investování do inovací a vıvoje rozdílnıch rysù rùznıch platforem
+\item	Silné geografické pokrytí a rostoucí sí partnerù, vèetnì úspìšného partnerství se spoleènostmi SAP, salesforce.com a IBM.
+\item	Jako jedni z prvních zahrnuli do svıch aplikaèních øešení také podporu wearables.
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Mobilní nástroje jsou nyní nejlépe pouitelné v souvislosti s øešením pro správu pracovní síly.
+\item	Øešení spoleènosti jsou slabá v nìkterıch èástech ivotního cyklu aplikace jako je napøíklad management. 
+\end{itemize}
+
+\subsubsection{DSI}
+Platforma umoòuje rychlı vıvoj pomocí drag-and-drop technologie. Tedy bez nutnosti znalosti jakéhokoliv programovacího jazyka a konceptu cílové platfromy. Nativní klient umoní vıslednou aplikaci spustit na zaøízeních s operaèními systémy Windows, iOS, Android a BlackBerry. Nástroje umoòují distribucí aplikací pomocí veøejnıch obchodù s aplikacemi. Aplikace mohou bıt také pouity ve formì webovıch stránek. DSI je vhodné pro tvorbu aplikací pøedevším ve vztahu B2E (Business to Employee).\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	DSI má velké zkušenosti s tvorbou mobilních aplikací pro vırobní a dodavatelskı segment.
+\item	Spoleènost má více ne 1100 zákazníkù ve více ne padesáti státech
+
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Není koncipován pro tvorbu aplikací ve vztahu B2C (Business to Client)
+\end{itemize}
+\subsubsection{Embarcadero}
+Spoleènost mající komunitu tøí miliónù vıvojáøù a více ne pìt tisíc zákazníkù. Produkt RAD Studio, je IDE a aplikaèní Framework umoòující vıvoj Windows aplikací pouitím jazykù Object Pascal, C++, HTML a JavaScript. Vısledné nativní aplikace mohou bıt pouity na mobilních operaèních systémech iOS, Android, Windows. Takté jako desktopové aplikace na Windows a Max OS X. RAD Studio umoòuje kompilaci do kódu stroje bez nutnosti virtuálního stroje èi jiné mezivrstvy. Dalším produktem spoleènosti je nástroj FireUI, jen umoòuje jednotnou tvorbu uivatelského rozhraní pro všechny platformy, vèetnì chytrıch hodinek.\\
+
+\indent Spoleènost takté produkuje nástroj AppMethod, jen je nástupce RAD Studia, zamìøenı na tvorbu Android aplikací a jejich následnou distribuci skrz veøejnı obchod s aplikacemi. Embarcadero je vhodné pouít pro firmy, jen mají zkušenosti s jazyky C++ èi Pascal.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Vıvoj aplikace spustitelné jak z mobilních OS, tak z desktopovıch OS
+\item	Prodejce má existující základnu podnikovıch vıvojáøù
+\item	Rychlá kompilace a vıvoj
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Nenabízí úplnı ivotní cyklus aplikace, jako napøíklad back-end sluby a cloudové testování.
+\end{itemize}
+
+\subsubsection{IBM}
+IBM nabízí sluby napøíè celím ivotním cyklem aplikace. Od pøedstavení, pøes vıvoj stylem drag-and-drop, integrované testy a vıvojové nástroje po monosti pøevedené aplikace z webové formy na nativní. IBM také umoòuje pouití nástrojù tøetích stran v kadém èlánku øetìzce. Toho je dokázáno velkımi investicemi, pøedevším do webovıch a jim pøíbuznıch standardù. Své sluby zaštiuje pod program MobileFirst, jeho souèástí je platforma Worklight. Ta zahrnuje analızu, testování, integraci, zabezpeèení a management a mùe bıt pouita jak pro vıvoj webovıch, tak nativních aplikací. Aplikace mohou bıt vytváøeny jak formou drag-and-drop, tak psaním v programovacím jazyce JavaScript. Spoleènost IBM se takté velmi usilovnì zapojuje do vıvoje slueb zaloenıch na cloud platformì. MobileFirst je vhodnı pro pouití v multiplatformním vıvoji s moností vyuití existujících dovedností v jazycích HTML5 a JavaScript èi vıvojovém prostøedí Eclipse.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Worklight umoòuje vyuití znalostí vıvoje webovıch a nativních aplikací
+\item	Worklight je souèástí velkého balíku slueb MobileFirst, zahrnující testování, cloud, bezpeènost èi monosti pøipojení
+\item	Øetìzec øešení Worklight je otevøeny a umoòuje vyuití prostøedku tøetích stran
+
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Spoleènosti IBM investuje velké mnoství prostøedkù do partnerského ekosystému a i pøesto je poèet vıvojáøù pracující s Worklight znaènì omezen.
+\end{itemize}
+
+\subsubsection{Kony}
+Spoleènost Kony, nabízí plnou podporu ivotního cyklu aplikace. Od jejího návrhu, a po øízení managementu aplikace. Veškeré sluby mohou bıt vyuiti jak v reálnıch prostorách, tak v privátním, èi veøejném cloudu. Základní rozdìlení platformy, jen Kony nabízí, je do tøí systémù. První z nich, Kony Visulation Cloud, nabízí schopnosti návrhu aplikace. Ty jsou integrovány do vıvojového prostøedí. Druhı systém, Kony Development Cloud, obsahuje vıvojové nástroje Kony Studio. Ty sice nedovolují pouití nástrojù tøetích stran, nicménì umoòují vıvoj jak nativní aplikací (pro iOS a Android), tak hybridních aplikací (na platformì PhoneGap). Další moností je vyuití HTML5 vıvoje. Kony je vhodné pouít pro projekty, u ni se poèítá s velkou komplexitou a dlouhou ivotností. Kony také nabízí silné back-end zázemí.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Díky zamìøení na celı ivotní cyklus aplikace je Kony silnım hráèem na trhu
+\item	Kony se rychle vyvíjí a nabízí garantovanou podporu pro nové funkce mobilních operaèních systému
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Velké investice do managementu 
+\item	Spoleènostem, jen ádají rychlı vıvoj aplikací, mùe pøipadat Kony a pøíliš sloitı
+
+\end{itemize}
+\subsubsection{Microsoft}
+Spoleènost Microsoft vstoupila do svìta multiplatformního vıvoje pøedevším svım balíkem slueb nazvanım Azure Mobile Services. Ty poskytují back-end sluby pro mobilní aplikace a jsou zaloeny na cloudové platformì. Vyuívat je mohou klientské aplikace jak na mobilních OS (iOS, Android, Windows) tak i pomocí HTML5 webového rozhraní. Dalším krokem Microsoftu pro multiplatformní vıvoj je univerzálnost aplikací na Windows platformì. Uivatel si tak mùe zakoupit aplikaci napøíklad na Windows Phone a následnì ji vyuívat i na Windows èi Xbox. Ve vıvojovém prostøedí Visual Studio, jen Microsoft vyvíjí, je umonìno vytváøet multiplatformní webové a hybridní aplikace. Pokud uivatel chce vyvíjet na mobilní OS Android èi iOS, umoní mu Microsoft vyuít nástroje partnerského prodejce Xamarin. \\
+\indent Novinkou roku 2014 pak monost vyuít IDE Visual Studio také pro tvorbu hybridních aplikací ve standardu Cordova a jazyce HTML5. Pro rok 2015 pak Microsoft chystá uvedení Visual Studio Code, jen odstraòuje nutnost Windows platformy pro vıvoj v tomto nástroji.\\
+
+\indent Vyuití nabízené platformy je vhodné pøedevším pro firmy, jen mají existující zkušenosti v nástroji Visual Studio èi frameworku .NET.
+\begin{itemize}
+\item[\textbf{Klady:}]
+\item	Ji navázané vztahy spoleèností s firmou Microsoft
+\item	Otevøené chování díky podpoøe iOS a Android v Azure Mobile Services
+\item	Microsoft Azure je momentálnì nejvìtší cloudová platforma
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Microsoft je stále zamìøen pøedevším na platformu Windows a nebude pro nìj jednoduché expandovat mezi jiné.
+\item	Pøestoe Microsoft ji pøedstavil svou vizi, kterou se chce v pøíštích letech ubírat, zbıvá mu ještì pøesvìdèit veøejnost, e jeho vize je ta správná
+\end{itemize}
+
+
+\subsubsection{MicroStrategy}
+Multiplatformního vıvoje spoleènost dosahuje pouitím vizuálních nástrojù na vytvoøení a konfiguraci UI a moností optimalizace vyvíjené aplikace pro rùzné velikosti a tvary displejù. Klientská èást aplikace je pak zajištìna pomocí nativního kontejneru s vyuitím widgetù pro jednotlivé operaèní systémy. MicroStrategy takté nabízí napøíklad sluby v oblasti správy uivatelù, zabezpeèení èí synchronizaci a uloení dat. Sluby této spoleènosti je vhodné vyuít pøi potøebì rychlého vıvoje.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Tvorba hezkého jednotného UI, které na pohled vypadá jako nativní
+\item	Monost vytváøení aplikací bez nutnosti znalosti jakéhokoliv programovacího jazyka.
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Vizualizace aplikace je limitována a nedovolí vıznamnìjší pøizpùsobení
+\item	MicroStrategy není pøíliš známé svou mobilní platformou
+\end{itemize}
+
+\subsubsection{Motorola Solutions}
+Jádrem spoleènosti v oblasti mobilního vıvoje je balík RhoMobile Suite. Ten, kromì jiného, obsahuje nástroj RhoStudio, pro tvorbu multiplatformních mobilních aplikací; nástroj RhoElements, HTML5 framework a kontejner pro nativní a hybridní mobilní aplikace; RhoConnect, umoòující offline synchronizaci a back-end integraci; a RhoHub, cloudovou slubu jen umoòuje vıvojáøùm vıvoj nativních aplikací bez nutné znalosti jednotlivıch SDK samotnıch operaèních systémù. RhoMobile Suite je vhodné pouít v pøípadì, e se potøebujeme starat o velké mnoství dat, potøebujeme back-end zázemí, èi máme široky rozptyl v oblasti cílového hardware.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	RhoElements podporuje širokou škálu mobilních zaøízení
+\item	Motorola Solutions má velké zkušenosti v oblastech maloobchodu, vıroby, inenırskıch sítí a dalších vıznamnıch prostøedí.
+
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	ivotní cyklus vıvoje mobilní aplikace není zcela úplnı, chybí napøíklad podpora fáze prvotního návrhu aplikace a její prototyp, automatické testování èi po vıvojová analıza.
+\end{itemize}
+
+\subsubsection{Oracle}
+Firma Oracle vstoupila do mobilního odvìtví svoji slubou Oracle Mobile Cloud Service a poté pøedstavením plánu na další sluby tıkající se mobilního vıvoje. V roce 2013 pak pøišel na svìt Oracle BI Mobile App Designer, jako èást balíku BI Foundation Suite. Tento designer umoòuje tvorbu analitickıch mobilních aplikací bez potøeby psát programovı kód. Øešení firmy Oracle je vhodné pøedevším pro organizace, jen mají ji nìjaké zkušenosti se softwarem firmy Oracle a chtìjí vyuít znalostí jazyku Java.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Velké dosavadní vısledky v oblasti prodeje softwaru
+\item	Oracle ADF Mobile nabízí hybridní vıvojové prostøedí podporující jazyky Java a JavaScript
+
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Aèkoliv Oracle pøedstavil plán tvorby více komplexního vıvoje mobilních aplikací, to nejpodstatnìjší mu stále chybí, back-end sluby
+\end{itemize}
+
+\subsubsection{Pegasystems}
+Pegasystems podporuje vıvoj webovıch, hybridních a nativních aplikací. Platforma mùe bıt vyuívána jak na vlastním serveru tak v cloudu. Základem je hybridní kontejner, jen je monı spustit na vìtšinì zaøízeních a umoòuje napøíklad vzdálenou správu aplikací, spuštìní více webovıch HTML5 aplikací èi více vláknové aplikace. Spoleènost nabízí také vyuití front-end nástrojù a frameworkù tøetích stran jako je JQuery Mobile, Xamarin èi Android SDK.\\
+
+\indent Pegasystems je atraktivní organizace, jen se prezentuje, pøedevším svım rychlím vıvojem podle poadavkù zákazníka.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Vyuívá HTML5 architekturu
+\item 	Online komunity vıvojáøù
+\item	Cloudové testovací nástroje
+\end{itemize}
+
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Malé zkušenosti s implementací B2C (Business to Customer)
+\end{itemize}
+
+\subsubsection{Sencha}
+Pøíklad obchodníka, jen je zamìøen v mobilním vıvoji èistì na web-centric pøístup. Sencha má vynikající znalosti HTML5 a snaí se aktivnì podílet na optimalizaci webovıch prohlíeèù, pøedevším jazyka JavaScript. Její nástroj Sencha Architect umoòuje navrhnout, vyvíjet a nasadit mobilní èi desktopovou aplikaci. Takté je monost vyuití vyvíjeného plug-inu do vıvojového prostøedí Eclipse. Další produktem je Sensa Touch, co je webovı Framework, umoòující pøístup k nativním mobilním funkcím pomocí jazyka JavaScript. Sensa Space pak nabízí nástroje k zabezpeèení dat a managementu aplikací. Nabídku spoleènosti Sensa je vhodné vyuít v pøípadì, e ji existují nìjaké zkušenosti v oblasti webovıch aplikací èi jazyku JavaScript. Programovací model by mìl bıt povìdomí tìm, jen pracovali s nástroji Adobe Flex, WPF, Java Swing èi jinımi objektovì orientovanımi platformami.\\
+\begin{itemize} \item[\textbf{Klady:}]
+\item Sencha je jedna z mála spoleèností, jen nabízí vıvoj v HTML5 a pøesto profesionální technickou podporu
+\item	Sencha je jedna z mála spoleèností, jen nabízí vıvoj v HTML5 a pøesto profesionální technickou podporu
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	Sencha plnì vyuívá HTML5  a JavaScript, co se mùe jevit i jako nevıhoda
+\end{itemize}
+
+\subsubsection{Progress Software (Telerik)}
+Od roku 2015 je spoleènost Telerik pod spoleèností Progress Software. Spoleènost Telerik je pøevánì zamìøena na Microsoft platformu. Vyuívá tak technologie Visual Basic, ASP.NET, WPF, Windows Forms èi Silverlight. Podporuje však i jazyky Java èi PHP. Za posledních deset let se firma pravidelnì zvìtšovala kadım rokem o padesát procent. Mobilní platforma Telerik Platform nabízí vıvoj v HTML5 a JavaScript s monım pouitím na mobilních operaèních systémech iOS, Android, Windows Phone a BlackBerry. Platforma se skládá z nástrojù, frameworkù a cloudovıch slueb a podporuje jak vıvoj nativních tak hybridních aplikací. K aplikaci lze vytváøet prototypy, testovat ji èi analyzovat. Nejoblíbenìjším produktem spoleènosti je Kendo UI, co je HTML5 framework postavenı na jQuery. Ten je také kompatibilní s nástroji Twitter Bootstrap, èi Google AngularJS. Telerik také podporuje tvorbu nativních aplikací skrz jeho nativní knihovny a kompilátor NativeScript.\\
+
+\begin{itemize} \item[\textbf{Klady:}]
+\item	Pøístup Teleriku, pøi kterém své produkty a sluby prodává vıhradnì pøes internet a za moderní ceny, je velmi úspìšnı
+\item	Platforma nabízí velké mnoství modulárních komponentù, frameworkù a nástrojù, které podporují vıvoj pro rùzné platformy
+\item	Platforma pouívá otevøené standardy jako jQuery, Bootstrap èi AngularJS a samotnı Kendo UI je takté opensource
+
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item	V minulosti spoleènost nebyla zamìøena na mobilní vıvoj
+\end{itemize}
+
+\subsubsection{Salesforce}
+Salesforce je spoleènost, jen má své vydobyté místo na trhu s cloudovımi aplikacemi tıkající se CRM. Na poli tvorby mobilních zaøízení pak nabízí svou platformu Salesforce1 Platform. Ta umoòuje vıvoj aplikací na nìkolika úrovních. Pokud se jedná o CRM aplikaci, mùe zákazník vyuít ji existujícího øešení od spoleèností a to si, s minimální nutností zmìny kódu, upravit podle svıch pøedstav. Další úrovní je pak tvorba nativních aplikací pomocí SDK, jen poskytují vırobci platforem. V nedávné dobì Salesfordce pøedstavil také podporu pro wearables zaøízení.
+
+\begin{itemize} \item[\textbf{Klady:}]
+\item Platforma Salesforce1 umoòuje tvorbu aplikací na nìkolika úrovních.
+\item Spoleènost je neustále na vzestupu.
+\end{itemize}
+\begin{itemize} \item[\textbf{Zápory:}]
+\item V nìkterıch odvìtvích vysoká cena.
+\end{itemize}
+
+\subsubsection{Verivo Software}
+V historii byla firma Verivo známá svou aplikací AppStudio, jen slouila pro vıvoj metodou drag-and-drop a mìla stovky zákazníku po celém svìtì. Tento smìr vıvoje však ukonèila a nyní se zamìøuje svou platformu Akula, zaloenou na jazyce Java. Ta nezahrnuje ádné front-end nástroje a namísto toho je navrena k vyuití frameworkù a nástrojù tøetích stran. Organizace by mìli zváit vyuití platformy Akula, pokud mají v plánù svou vyvíjenou multiplatformní aplikaci pøipojit k podnikovému systému. Pokud chtìjí pouít pro vıvoj metodu drag-and-drop bez nutnosti znalosti programování, mìli by vyuít stále podporovanou aplikaci AppStudio.
+
+\subsubsection{Xamarin}
+Spoleènost Xamarin nabízí nástroje, komponenty a cloudové sluby které umoòují vıvojovım tımùm vytváøet nativní multiplatformní aplikace v jazyce C\# které jsou spustitelné na systémech Android, iOS, Windows, Windows Phone èi Mac OS X. Xamarin nabízí rychlí vıvoj, pøedevším díky monosti vyuití existujících dovedností s frameworkem .NET. Spoleènost zamìstnává pøes 15 000 zamìstnancù a zahrnuje komunitu pøes 650 000 vıvojáøù. Xamarin pøekládá jazyk C\# do nativních kódù pro kadou zvolenou cílovou platformu a nabízí dvì vıvojová rozhraní. Prvním z nich je plug-in do hojnì vyuívaného vıvojového prostøedí Visual Studio, druhım pak vlastní vıvojové prostøedí Xamarin Studio. Vıvojáøi mohou dosáhnout nativního UI a sdílení kódu dvìma zpùsoby: Mohou vytváøet oddìlenı kód UI v jazyce C\# a vyuívat API specifikované na konkrétní platformu, nebo mohou vyuít komponenty Xamarin.Forms, jen se pak do zvolené platformy pøeloí. Spoleènost Xamarin také úzce spolupracuje s firmou Microsoft, z èeho tìí jak její prodeje, tak integrace. Dalším nástrojem, jen lze pøi vıvoji pouít, je Xamarin Test Cloud, jen umoòuje automatické testování napøiè mnoha zaøízeními a verzemi operaèních systémù. Xamarin je vhodné vyuít pro vıvojáøe, jen mají ji existující zkušenosti v jazyce C\# a chtìjí vyvíjet nativní aplikace, jen mohou bıt pøeloeny do více operaèních systémù. I kdy je Xamarin nezávislá spoleènost, mnoho organizací ji vidí jako souèást vıvojové strategie firmy Microsoft.\\
+\indent V roce 2014 Xamarin uzavøel partnerství s dalšími velkımi spoleènostmi, jako je IBM, SAP èi Oracle. Pokraèuje také ve vylepšování svıch produktù. Xamarin Test Cloud tak k tomuto roku podporuje více ne 1600 zaøízení a operaèních systémù. Pøedstavil také slubu Xamarin Insights, která se stará o monitorování pádù aplikací.
+
+\begin{itemize} \item[\textbf{Klady:}]
+
+
+\item	Xamarin cílí na neobsazené místo na trhu – C\# vıvojáøe, kteøí chtìjí své zkušenosti pøenést do mobilního vıvoje
+\item	Xamarin nabízí jak své vlastní IDE tak plug-in do Visual Studia
+\item	Xamarin si vytvoøil na trhu velmi silné partnery
+\end{itemize}
+
+
+
+
+
+
+
+\subsection{Srovnání}
+
+\section{1. vybraná spoleènost}
+
+\subsection{Historie}
+\subsection{Technologické monosti}
+\subsection{Uivatelská základna}
+\subsection{Potenciální rozvoj}
+
+\section{2. vybraná spoleènost}
+
+\subsection{Historie}
+\subsection{Technologické monosti}
+\subsection{Uivatelská základna}
+\subsection{Potenciální rozvoj}
+
+\section{Tvorba aplikace}
+
+\subsection{Téma}
+
+\subsection{Vıvoj}
+
+\subsubsection{Potenciální problémy a jejich moná øešení}
+
+\subsubsection{Pouité nástroje}
+
+\subsection{Programátorská dokumentace}
+
+\subsubsection{Popis tøíd}
+
+\subsection{Uivatelská dokumentace}
+
+\subsection{Srovnání pouitıch frameworkù}
+
+
+
+
+\end{document} 
