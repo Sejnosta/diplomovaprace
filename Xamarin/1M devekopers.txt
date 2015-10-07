@@ -1,0 +1,42 @@
+Xamarin Celebrates 1M Developer Milestone & Launches New Capabilities for Enterprises That Embrace Mobile as a Strategic Growth Strategy
+The company’s complete mobile delivery solution combined with double-digit growth in developer adoption and revenue position Xamarin as the leader in the next wave of mobility
+
+April 29, 2015 02:00 PM Eastern Daylight Time
+SAN FRANCISCO--(BUSINESS WIRE)--Xamarin, the enterprise mobile development platform that makes it fast and easy to build, test and monitor apps, today announced it has reached 1 million unique developer downloads and achieved significant company growth in the last year. To complement this massive growth, Xamarin is launching product updates that will propel enterprises into the next wave of mobility, where mobile is a strategic advantage.
+
+“Consumer apps are the ones most often in the news, but the real economic impact of mobile is happening behind closed doors in the enterprise”
+
+In this new era, organizations will use hundreds of apps to drive revenue, competitive advantage, employee productivity and channel efficiencies. According to Forrester Research’s Global Tech Market Outlook (source), enterprise spending on mobile apps will experience double-digit growth in 2015 and 2016, and the proliferation is not expected to slow. Data from Xamarin’s own research supports the growing business significance of mobile apps: over half of companies polled stated that mobile is “mission critical” or “very important” to the success of their company and 76 percent of companies polled shared that response when asked about mobile’s role in three-to-five years. Popular enterprise mobile app categories include collaboration, executive and field apps.
+
+Enterprise apps will follow consumer trends, extending beyond smartphones and tablets to new form factors and emerging technology. Xamarin is already a strong player in the wearables market, as the only mobile app platform with comprehensive support for Android Wear, Microsoft Band and Apple Watch. Today’s release expands the company’s Apple Watch support to enable developers to design and develop Apple Watch apps from Microsoft’s Visual Studio IDE. Now, Xamarin easily connects one of the world’s largest developer communities to one of the most successful device platforms, preparing enterprises to rapidly release apps on constantly evolving mobile devices.
+
+“Consumer apps are the ones most often in the news, but the real economic impact of mobile is happening behind closed doors in the enterprise,” says Nat Friedman, CEO and cofounder, Xamarin. “Our most successful customers have moved beyond experimentation and are rapidly mobilizing every part of their business. This means delivering hundreds of apps for customers, employees and partners. We’ve built the company and our solution specifically to help businesses succeed in delivering mobile at this kind of scale.”
+
+Company Momentum
+
+Xamarin continues to set itself apart as an industry leader, with growth in all areas, from its customer base to its product offerings. In the past 12 months, Xamarin’s developer community has grown 98 percent to 1 million unique developer downloads, and sales have more than doubled. Tech career website serving IT and engineering professionals, Dice.com, recently listed Xamarin as the fourth-fastest growing skill set in demand by employers posting job opportunities on its site (source). With this rapid growth and a customer base spanning 150 countries, Xamarin expanded its global footprint with a new U.K. headquarters and now has offices in four countries. Following a $54 million series C funding round in August of 2014 — the single largest round of any mobile app development company — Xamarin entered the mobile application lifecycle arena with the launch of Xamarin Test Cloud and Xamarin Insights.
+
+New Mobile Development Capabilities
+
+Xamarin is expanding its Visual Studio support to accelerate mobile app development for iOS, Android and Windows, now enabling enterprises developers to:
+
+Leverage Visual Studio for designing and developing Apple Watch apps, as well as Xamarin’s existing full SDK support for Android Wear and Microsoft Band. Xamarin is now the only mobile application development platform with comprehensive native development support for building smartphone, tablet and smartwatch apps for iOS, Android and Windows.
+Share more code across mobile device platforms with Xamarin.Forms. With Xamarin.Forms, developers share more than 90 percent of code across platforms, and today, Xamarin expands Xamarin.Forms to include the general availability of its support for Windows 8 and a private beta of its support for Windows 10 universal apps. Now, developers can deliver native UI for the phone and tablet form factors for iOS, Android and Windows from shared code, dramatically accelerating the development process.
+Development velocity and rapid innovation are critical in today’s competitive landscapes. With these product updates, Xamarin positions its customers to gain substantial competitive advantage through accelerated release times, across all devices and technologies.
+
+Continuous Innovation
+
+Successful mobility requires much more than merely building and deploying apps. Comprehensive quality and support strategies are required to ensure that apps look, perform and behave well on hundreds of variations of platforms, operating systems and manufacturers, and to ensure that crashes and bugs with live users are identified and fixed quickly. The Xamarin Platform, Test Cloud and Insights provide an end-to-end solution to efficiently build, test and monitor high-quality, high-performance mobile apps, which means businesses are able to move beyond mobile experimentation to delivering apps at scale—potentially hundreds of apps simultaneously—and more easily adopt continuous delivery for mobile.
+
+Through joint engineering between Microsoft and Xamarin, the companies introduce new workflows in Visual Studio Online, that significantly reduce time-to-market and enable high-quality apps. Through this collaboration, Virtual Studio Online users can:
+
+Build Xamarin.Android apps through Visual Studio Online’s cloud build service, vastly reducing the overhead of configuring and maintaining an on-site build server.
+Identify and resolve issues faster, since Visual Studio Online initiates mobile tests in Xamarin Test Cloud, which then automatically creates work items back in Visual Studio Online based on test results.
+Receive work items automatically in Visual Studio Online through Xamarin Insights' ability to monitor production apps for crashes, exceptions and events.
+According to Xamarin research, 41 percent of respondents report that enterprise apps are released at least monthly or more frequently, with roughly the same release frequency for consumer apps. The expectation is that release cycles will be even faster within the next 12 months. Today’s releases position Xamarin’s large and fast-growing developer community to prepare for this heightened release velocity, and to scale for the increased demand for significantly more enterprise apps.
+
+To learn more about mobile development with Xamarin and today’s announcement, visit: http://blog.xamarin.com/xamarin-passes-1-million-developer-milestone
+
+About Xamarin:
+
+Xamarin is the new standard for enterprise mobile development and quality. Over 1 million developers use Xamarin to accelerate the creation and testing of mission-critical consumer and enterprise apps. Xamarin powers mobile development for more than 100 of the Fortune 500 companies and a global customer base spanning 120 countries. Xamarin is a Visionary in Gartner’s 2014 Magic Quadrant report for Mobile Application Development Platforms. For more information, please visit: xamarin.com or follow us @xamari

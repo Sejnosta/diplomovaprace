@@ -1,0 +1,90 @@
+Xamarin 3 Enterprise Edition Reviewed
+By Mike Riley, May 28, 2014
+
+2 Comments
+
+With a state-of-the-art designer for iOS and Windows, seamless forms integration, more widgets, and simplified, integrated builds, Xamarin 3 finally realizes the dream of polished, high-quality, native iOS apps written in C#
+When I tried the first beta release of Project Mono for iOS, the precursor of what would become Xamarin Studio, I (and many other iOS developers) was intrigued by what I saw. I have never been a big fan of Objective-C, feeling like it was a vestigial language from another time and place. But Objective-C has matured considerably, even though it still lacks the comfort and syntactical ease of more modern languages like Java or C#. So when Xamarin offered the ability to build native iOS applications using C#, a language far more popular in the large than Objective-C, I was cautiously enthusiastic. That first experience proved that C# code could be compiled into native iOS programs, but it was a disjointed experience. Much of the presentation layer was reliant on knowing how to use Apple's developer tools such as Xcode and Interface Builder.
+
+A lot has changed since that first release. Version 3.0 provides many new important features, which I'll describe in a moment. In this discussion, I'll refer occasionally to my previous review of Xamarin 2 release.
+
+What's New in Version 3?
+Xamarin touts that this new release includes more than 150 new features and thousands of enhancements. While that may be the case, the new additions that will matter the most to existing and new Xamarin developers alike are the Xamarin Designer for iOS, Xamarin.Forms, the new UI for Xamarin Studio, and integration improvements between Xamarin and Microsoft Visual Studio. Let's take a closer look at each of these major enhancements.
+
+Xamarin Designer for iOS
+The Xamarin Designer for iOS is the best, most groundbreaking improvement in the new feature line-up. It finally brings an integrated iOS GUI editor to both Mac OSX and Microsoft Windows platforms. And just as Visual Studio developers have come to expect the live preview of controls in the forms assembly environment, Xamarin Designer supports that feature as well. That's a huge deal for previous Xamarin developers who preferred using the far richer Visual Studio development environment versus Xamarin's OSX-based Studio. Instead of having to bounce back and forth between Xcode on the Mac and Visual Studio on Windows, VS users can now work almost entirely within a Windows environment.
+
+XamarinDesigner
+Figure 1: Designing iOS user interfaces inside Microsoft Visual Studio. How cool is that?
+
+However, Visual Studio developers are still beholden to the Apple software tools because Xamarin has no other choice but to rely on Apple's Xcode tools running on a Mac computer to compile and digitally sign an iOS binary for deployment. Fortunately, Xamarin has made this process as painless as possible by providing the Xamarin.iOS Build Host that runs on a Mac with Xcode installed. This has been available since the Xamarin 2 release, but now that both screen designing and code writing can take place within the same development environment, productivity soars as a result.
+
+XamarinDesigner
+Figure 2: Xamarin.iOS Build Host allows Visual Studio developers to create iOS apps almost entirely within the Visual Studio IDE.
+
+Xamarin Designer also fully supports the latest design elements in iOS 6 (and later) including Apple's latest Storyboard format. Storyboard usurps Interface Builder and turns app screens into a flowing set of forms. Xamarin Designer also supports auto-layout and has intuitive event handling so everything works as you would expect. Developers can even extend their own controls to support live, design-time rendering previews. This capability will no doubt fuel even more growth in Xamarin's component marketplace.
+
+XamarinDesigner
+Figure 3: Xamarin Designer for iOS supports Apple's Storyboard format.
+
+I was quickly up and running with the designer within both Xamarin Studio on the Mac and Visual Studio on Windows, assembling live-preview UIs and running the results in the iPhone and iPad simulators within a matter of minutes. It really is a game changer, and one that has been a long time coming.
+
+Xamarin.Forms
+As long-time fans of Xamarin know, the desire to write a native app for the Android and iOS platforms from a single project codebase using Xamarin Studio has been confounded by the drastic differences in the way each of these platforms employ their own native UI components. Previously, developers using Xamarin tools to target both platforms would have to be forward-thinking in breaking out their code into reusable layers that could be shared between platform compilations. But with the new Xamarin.Forms, developers can finally use the same UI design and code for either target platform, and compile projects to automatically use the native controls on both.
+
+In other words, the dream of developing a single project containing both presentation and logic layers that can be compiled and executed on multiple mobile OS targets using Xamarin's platform is finally a reality. Combined with Xamarin Designer, employing Xamarin.Forms and its default set of 43 controls and layouts will swap Xamarin's UI representations with the target mobile platform's own buttons, sliders, switches, etc. Thanks to Xamarin.Forms, the days of lowest-common-denominator mobile UIs are over.
+
+XamarinDesigner
+Figure 4: Xamarin.Forms delivers native user interfaces on mobile platforms from a single design code base.
+
+Of course, there will always be a need to leverage platform-specific widgets to polish cross-platform targeted apps. Fortunately, Xamarin allows Xamarin.Forms to be mixed in with native, targeted components so their approach does not require an all-or-nothing decision. Forms are also extensible, and a well-documented API gives developers a great degree of flexibility for customization and control. After quickly acclimating to this new level of platform UI abstraction, I felt a majority of business-class and many consumer-level scenarios could be competently rendered with Xamarin.Forms assistance. And with no loss in user experience fidelity, Xamarin.Forms will no doubt become the most popular way to develop UI-rich Xamarin apps in the future.
+
+Windows .NET developers will also appreciate Xamarin.Forms support for XAML, especially because Xamarin.Forms works across all three mobile platforms (Android 4+, iOS 6.1+, and Windows Phone 8+).
+
+While it might never be possible to create a highly complex, cross-platform native mobile application from a single code source, Xamarin.Forms is a huge leap forward in making developers' design workflows far easier to manage.
+
+amarin 3 Enterprise Edition Reviewed
+By Mike Riley, May 28, 2014
+
+2 Comments
+
+With a state-of-the-art designer for iOS and Windows, seamless forms integration, more widgets, and simplified, integrated builds, Xamarin 3 finally realizes the dream of polished, high-quality, native iOS apps written in C#
+Xamarin Studio Refresh
+Besides the exciting advances in forms design and abstraction, the first major change that existing Xamarin Studio users will notice is the enhanced level of polish that envelopes the IDE. While it still doesn't have the ultra-sleek look of Apple Xcode or Microsoft Visual Studio, it is looking better than ever before.
+
+XamarinDesigner
+Figure 5: The new look of the Xamarin Studio welcome screen.
+
+There are also a few enhancements to make project workflows easier, such as built-in support for the NuGet package manager and the ability to work with Microsoft's new Shared Projects support to allow easier project/solution collaboration between Xamarin Studio for OSX and Visual Studio for Windows. And for those developers who prefer functional languages, Xamarin now provides full support for F#. Personally, I'll continue to do most of my work in C#, but with the incorporation of F#, does this mean that VB.NET-like language support for iOS and Android isn't far behind?
+
+XamarinDesigner
+Figure 6: Xamarin now provides first-class support for F#.
+
+Visual Studio Enhancements (All the Way Back to VS2010)
+Xamarin recently acquired Clarius Consulting, a company well known among Microsoft developers for its extensions to Visual Studio. This investment boosted Xamarin's integration and interoperability of its tools within the Visual Studio IDE. For example, instead of having separate Visual Studio extensions for both Android and iOS development, Xamarin 3 delivers its multi-mobile development goodness in a single extension. This design lowers the extension management complexity while ensuring that both Android and iOS support is maintained in lock-step upgrade and maintenance support.
+
+The new release also delivers full Portable Class Libraries (PCL) support. PCL is Microsoft's new approach to building reusable code libraries across multiple platforms running .NET (Desktop, Windows Phone, XBox, etc.). Xamarin also provides full documentation for Base Class Libraries (BCL) for better IntelliSense look-ups.
+
+XamarinDesigner
+Figure 7: Creating Android, iOS and Windows Phone 8 apps almost entirely within Visual Studio is possible using Xamarin 3.
+
+Android Enhancements
+Xamarin Studio also improves the Android development experience by fully supporting Google's next-generation Android RunTime (ART), which is expected to officially replace the aging Dalvik runtime in a future release of the Android OS. Xamarin has also expanded its support of dozens of emerging devices based on the Android OS including Amazon's FireTV, Google Glass, and various smart watches and other wearables. I was able to create and run Xamarin Android apps in several different Android emulators and the Xamarin runtime (which can also be linked directly into an Android app) executed flawlessly on each.
+
+Recognizing the bewildering variety of shapes and sizes housing the Android OS, Xamarin is working on a new service (called Xamarin Test Cloud) designed to test Android applications on literally hundreds of different Android devices. Xamarin has a lab filled with actual Android hardware that they will execute and test Android customer programs (and not just those built with Xamarin Studio, but any tool capable of compiling a native Android application), and deliver a compatibility report. This service is expected to be available later this year.
+
+Xamarin University
+Available as a separate service, Xamarin University is the company's online training for the Xamarin suite of technologies. Unlike many other training courses, Xamarin's courses are presented live and vary daily. This gives participants a more targeted approach to learning and helps to maintain engagement. At the cost of $1,995 per year, Xamarin University is hands-down the best online live educational experience for mobile developers today.
+
+I had the chance to attend three online sessions in conjunction with this review, each taught by a different instructor. Online class sizes ranged from four to more than a dozen students, with instructors taking the time to get to know each attendee and their objectives before training started. Instructors also took the time to help out individuals requiring additional assistance with running an example or understanding a concept. They even provided consulting on some of the developers' projects, giving specific insight and expertise on which approach would work best. For developers committed to the Xamarin platform for their mobile development needs, enrollment in Xamarin University delivers an excellent educational value. It is also the only way to attain Xamarin mobile developer certification status, as Xamarin University classes are required prior to taking Xamarin's certification exam.
+
+XamarinDesigner
+Figure 8: Xamarin University delivers a daily selection of live instructor online classes.
+
+My only criticism is that Xamarin's training service needs to be offered with more flexible subscription durations. Currently, Xamarin University is available only as an annual subscription, but it would be more approachable to developers wanting to try out the service if Xamarin offered monthly or quarterly options that could be applied toward the annual subscription rate and credit toward developer certification.
+
+Pricing and Availability
+Xamarin 3 has already been available to Xamarin's beta channel subscribers for a few weeks and it was officially elevated to its production-level Stable channel on May 28, 2014. Existing, active annual Xamarin subscribers will automatically receive these impressive improvements at no additional charge. New subscribers will pay the same the same annual rate that current subscribers pay, which starts at free for individual use and ranges to $1,899/year for enterprise customers. If you don't use or require Visual Studio integration, the $299/year option is an excellent bargain, while the $999/year business plan is the most cost-effective if you don't need next-day SLA, immediate hotfixes, and a dedicated technical account manager assigned to your organization.
+
+Final Thoughts
+With this release, Xamarin goes from offering a useful, cross-platform C# technology solution to providing the best multi-platform, native mobile development solution, bar none. The new release is also a must-have upgrade for existing Xamarin subscribers. If you work as an ISV, corporate developer, or even just a mobile developer hobbyist, you owe it to yourself to give Xamarin 3 a try. My only concern is for the company's long-term independence. Xamarin has assembled such a winning product and service collection that they are ripe for acquisition by a major technology company. Personally, I hope Xamarin's leadership can withstand the temptation to be acquired and keep the company entirely focused on making major strides in the mobile development arena.

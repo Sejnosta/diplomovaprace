@@ -1,0 +1,20 @@
+PHONEGAP, RDIO, VISUAL STUDIO, WINDOWS PHONE, XAMARIN
+large_5262078254If you develop in C#, you can now build apps for iPhone and iPad … and hundreds of millions of Android smartphones and tablets. And you can do it all right on your PC in your favorite development environment, Visual Studio.
+
+Even better, your apps share about 90 percent of their code, making cross-platform development simpler and quicker.
+
+Today Xamarin is launching Xamarin 2.o, a bundle of products including Xamarin Studio, a new IDE, Xamarin.iOS for Visual Studio, a plugin for Visual Studio that enables cross-platform mobile development, and the Xamarin Component Store, an “app store for code,” where you buy and sell components of apps to speed your development and make some cash.
+
+SPONSORED BY VB
+Join us at GrowthBeat where thought leaders from the biggest brands will share winning growth strategies on August 17-18 in San Francisco. Sign up now!
+“Xamarin enables us to deliver high performance, native apps that, until Xamarin, were only possible with Objective-C and Java,” says Matt Crocker, director of client engineering at Rdio, which has been using the new software. “Sharing over 50,000 lines of code across platforms gives us more time to spend on great user experiences. Xamarin 2.0 will help us build even better apps, faster.”
+
+With the massive rise in mobile devices and apps, cross platform development tools are enjoying a golden age. PhoneGap allows developers to build for iPhone, Android, BlackBerry, and Windows Phone in HTML, CSS, and Javascript. Corona created its own simple language, Lua, to enable cross-platform development in a single language. Appcelerator’s Titanium developer platform — which the company claims is the widest-used in the world — also uses Javascript as the foundation programming language.
+
+Xamarin’s approach?
+
+There are eight million C# developers in the world, the company says. So why not let them build mobile apps in a language they know? The Xamarin studio, which also allows developers to build Mac apps, lets C# developers leverage their existing skills, “essentially transforming existing teams into mobile developers virtually overnight.”
+
+Launched two years ago, Xamarin says it already has 230,000 mobile developers using its software development tools, growing its developer community 300 percent in the last year alone, and adding 12,000 new customers — companies like Clear Channel, Rdio, and the Portland Trailblazers.
+
+“In the very near future, every business process and customer transaction will happen on a mobile device,” Nat Friedman, Xamarin’s CEO and cofounder said in a statement. “Xamarin’s unique approach … has already helped thousands of businesses to successfully deliver on their mobile strategy.”

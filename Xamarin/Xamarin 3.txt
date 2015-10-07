@@ -1,0 +1,87 @@
+Xamarin 3 review: Making cross-platform mobile development painless
+We take a closer look at Xamarin's latest mobile platform and like what we see.
+
+by Peter Bright - May 28, 2014 5:00pm CEST
+Share Tweet  
+90
+Xamarin 2 opened up Visual Studio to support the development of iOS and Android apps using the C# language and .NET library when it arrived on the scene last year. Today, Xamarin has released Xamarin 3, the newest version of its cross-platform mobile development framework, and I've been taking a look at it.
+
+Xamarin's Mono-based toolchain is already increasingly popular among mobile developers. It appeals to a range of developer communities. For some, it offers a convenient way to produce applications that span iOS, Android, and perhaps even Windows or Windows Phone, without having to write the app for each platform from scratch. For others, it provides a nice way to bring workplace development skills to bear on hobbyist projects.
+
+Xamarin is striving to produce the best—and perhaps only—framework that can target the major mobile platforms while still not giving up the quality and performance expected of native apps.
+
+The Xamarin platform isn't the only thing out there that enables this kind of cross-platform, mobile-oriented development. Apache Cordova, for example, is an HTML-based system for doing the same, and earlier this month Microsoft announced that it would be integrating Cordova support into Visual Studio directly.
+
+Xamarin has distinguished its platform from tools like Cordova in a couple of ways. First it uses the C# language. Many developers feel that C#'s static type checking makes it a more robust language for developing large applications than the JavaScript that Cordova uses. Not only does the type checking enable detection of a greater number of errors before they ever reach a customer, it also empowers the development environment to provide, for example, rich refactoring support.
+
+FURTHER READING
+
+
+XAMARIN 2.0 REVIEWED: IOS DEVELOPMENT COMES TO VISUAL STUDIO
+Write your iOS software from within Windows. Yes, really.
+Second, Xamarin has always promoted its support for platform-native user interfaces. The company's position is that interfaces built using each platform's built-in interface capabilities and designed for each platform's interface conventions provide the best user experience. The one-size-fits-all interfaces built with HTML tools may be easy for developers, but that doesn't make them good for end users.
+When I looked at Xamarin 2 last year, I was impressed by the remarkably tight integration between Visual Studio, iOS, and Android. Android development can be done entirely on the PC, using the Android SDK for Windows to provide emulators for debugging and testing. iOS development is a little more complex; to actually build and deploy iOS applications requires the use of a Mac. The Xamarin plugin for Visual Studio communicates with Xamarin software running on the Mac, and the Mac is used for compilation and related tasks. Some minor teething issues aside, this all worked well, with the development and debugging experience being every bit as good as native.
+
+(Microsoft's own Cordova integration has a similar requirement; Apple requires that apps built for its mobile platform be built using its tools.)
+
+However, there were some shortcomings. Chief among them was that there was no interface designer tool within Visual Studio for iOS applications. iOS developers could build their interfaces in code, or they could use Xcode on OS X. This meant that the iOS development experience was less seamlessly integrated than the one for Android (or Windows Phone), both of which were supported directly within Visual Studio.
+
+Since the release of Xamarin 2, Xamarin has further extended its platform to enable easy code sharing between iOS, Android, Windows, and Windows Phone as part of an ongoing collaboration with Microsoft.
+
+Released today, Xamarin 3 is the next step toward Xamarin's goal of building the best mobile app development platform. In addition to a laundry list of incremental improvements, the new version includes two significant new features: Xamarin Designer for iOS and Xamarin.Forms.
+
+Xamarin Designer for iOS rounds out that awkward gap: creating interfaces for iOS without having to leave the Visual Studio-based workflow. The Designer enables drag-and-drop user interface design directly from the Visual Studio environment.
+
+
+Enlarge / It's the Xcode Storyboard editor, but it's in Visual Studio, with the Visual Studio toolbox, Visual Studio double-click behavior, and so on and so forth. Now you never need to actually look at Xcode.
+The widgets and controls used within Designer are fully iOS native, and they render within Visual Studio with all the fidelity that you'd get using Xcode's Storyboard-based designer, because, behind the scenes, that's what powers Xamarin Designer. Just as Visual Studio defers to a Mac build host to compile and package iOS apps, it also defers to a Mac build host to render and manipulate Storyboards files. However, the designer still manages to abide by Visual Studio conventions, such as double-clicking controls to set up event handlers.
+
+Though I didn't test the designer exhaustively (even with a designer, constructing UIs remains time-consuming, fiddly work), it worked and felt well integrated. Developers using it will still have to be familiar with the way the Storyboard editor in Xcode works, as these are still Storyboards, and the layout and presentation follows the pattern of the Xcode Storyboard editor. But the back-and-forth switching between Visual Studio and Xcode for interface design is gone. I think it will give developers a much more coherent development experience, and it should prove a welcome addition.
+
+Now the only thing left is to bring the iOS simulator over to Windows somehow. This is the last part of the development experience that makes one switch.
+
+Solving the interface problem
+
+Since the outset, Xamarin has promoted the use of native user interfaces layered above a shared core. To that end, there has never been a Xamarin GUI toolkit or library for cross-platform UI development. While this stance is, I think, appropriate for many applications, especially those that are designed for public consumption, it can be a sore point for some Xamarin developers.
+
+Internal-use line-of-business applications, for example, generally have less stringent interface demands; when a company can dictate that every employee use an app whether they like it or not, it doesn't have to be pretty or elegant to win users over. If it did, software such as PeopleSoft would never have taken off. For these applications, the most important factor is ease and speed of development. Having to create three separate interfaces for iOS, Android, and Windows Phone isn't an important way of creating end-user appeal; it's simply busy work.
+
+Even for end-user software, most apps have portions of their user interface that are straightforward and common to all their platforms. Settings screens, for example, don't normally contain any great design work. Having to recreate these screens on each platform is, again, repetitious rather than value-creating.
+
+Importantly for Xamarin, this is one area where systems like Cordova excel. They make it very easy to create an interface once, in HTML, and use it across devices. Matching this kind of capability is competitively important.
+
+Xamarin.Forms is Xamarin's answer to this problem. Xamarin.Forms is not a custom GUI toolkit; it doesn't compromise on the goal of using native UI elements for the most natural look and feel on each platform. What it does do, however, is allow developers to construct their UIs using code or XAML and have each respective platform do the Right Thing.
+
+The development model is structured to be independent of any one platform. Views model the data displayed on-screen and plumb that data into event handlers. Layouts describe the arrangement of the Views shown on each Page, the navigational elements. These parts are platform-independent. Their presentation is governed by platform-dependent Renderers that are responsible for the actual drawing on-screen.
+
+
+TabbedPage controls generate as many tabs as there are items in the data source used to populate them. The contents of each tab are laid out as specified by the XAML.
+
+   
+The Renderers strive to produce an interface that's appropriate to the device it's used on. For example, an interface using tabs to switch between panes will put the tab names at the bottom of the screen on an iPhone. On Android, it will put them at the top. On Windows Phone? It will use a panorama. Similarly, an app with a menu will use a swipe from the left on Android, a menu icon in the top left on iOS, and a cog icon on Windows Phone.
+
+The range of controls offered seems respectable, with the usual array of buttons, input boxes, sliders, and time and date pickers all available. The Layout controls will look familiar to anyone who's used XAML, with grids, stacked layouts, tables, lists, and so on.
+
+Xamarin.Forms has been designed to allow easy customization of the generic interface to tweak or modify things on a per-platform basis. Switching on the device type is easy and built-in. For example, the following snippet will vary the font size on a per-platform basis:
+
+Device.OnPlatform(
+    iOS: () => label.Font = Font.SystemFontOfSize (NamedSize.Micro),
+    Android: () => label.Font = Font.SystemFontOfSize (NamedSize.Medium)
+    WinPhone: () => label.Font = Font.SystemFontOfSize (NamedSize.Large)
+);
+The various generic built-in controls also allow you to access the underlying native platform control to apply platform-specific options. By sprinkling a handful of platform-specific lines of code here and there, developers can keep the vast majority of their apps cross-platform while still making sure they are tailored and sympathetic to the preferred styles of each individual device.
+
+Even with customization, front-ends built with Xamarin.Forms are unlikely to be among the most attractive and stylish to be found on any given platform; full custom per-platform interfaces are always going to have the edge here. But for many applications, Xamarin.Forms will give developers everything they need. So many applications have basic repetitive screens—things like capturing login credentials, for example—and Xamarin.Forms will let devs create these screens in a fraction of the time that they once needed.
+
+I think Xamarin.Forms is of huge importance to the Xamarin platform, and its introduction was much-needed. While its value to developers targeting only a single platform is likely marginal, to those targeting two or three platforms, it's going to save a lot of time. Particularly among line of business developers, I can see Xamarin.Forms becoming the primary way of creating interfaces.
+
+Other improvements
+
+
+In addition to these two major features, Xamarin 3 makes a number of worthy improvements to Xamarin's own Xamarin Studio development environment. The new version supports the F# functional programming language, which, while not as popular as C#, is attracting a growing number of .NET developers. It also has support for the NuGet package manager, which has become the standard package management tool of the .NET community.
+
+The collaboration with Microsoft has also seen Xamarin's code-sharing capabilities enhanced. Portable Class Libraries enable the creation of libraries that can be used on any .NET platform: Windows, Windows Phone, iOS, Android, the Windows desktop, Silverlight, and Xbox. Both Xamarin Studio and the Xamarin plugin for Visual Studio now support PCLs. They both also support Visual Studio 2013 shared projects, which enable a similar kind of sharing at the source code level rather than the compiled code level.
+
+When looking at Xamarin 2.0, I found that the link between Visual Studio and the iOS build host was a little unreliable and finicky, with the two becoming detached from one another from time to time. I'm not sure what has changed, but my experience with Xamarin 3 was much more consistent and much more robust, with only version upgrades disrupting the connection (both the Visual Studio side and the OS X side need to be upgraded in tandem for best operation).
+
+The Xamarin platform already had much to offer for mobile developers, whether they were looking to use the languages and libraries that they were familiar with or wanted to support multiple platforms without multiplying their development costs. Xamarin 3 improves it in two important and valuable ways. Xamarin Designer makes the Visual Studio experience even more integrated and powerful, and Xamarin.Forms makes the platform a much better fit for a wide range of line of business apps. On top of all this, the productivity benefits of using C# can make it an attractive platform even when cross-platform development isn't the priority. A good platform has become even better.
